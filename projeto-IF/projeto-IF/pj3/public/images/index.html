@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Register Form</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- ... o restante do seu conteúdo HTML ... -->
+
+    <script>
+        function selectIcon(icon) {
+            // Remove a classe 'selected' de todos os ícones
+            const icons = document.querySelectorAll('.icon');
+            icons.forEach((i) => i.classList.remove('selected'));
+
+            // Adiciona a classe 'selected' apenas ao ícone clicado
+            icon.classList.add('selected');
+        }
+
+    // ... outras funções JavaScript que você pode ter ...
+    </script>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+
+
+                <button type="button" class="toggle-btn" onclick="login()">Log in</button>
+
+
+
+                <button type="button" class="toggle-btn" onclick="register()">Cadastro</button>
+            </div>
+
+            <div class="social-icons">
+                <i class='bx bxl-facebook-circle'></i>
+                <i class='bx bxl-instagram'></i>
+                <i class='bx bxl-twitter'></i>
+            </div>
+            <form id="login" class="input-group">
+                <input type="text" class="input-field" placeholder="Nome" required>
+                <input type="text" class="input-field" placeholder="Digite a Senha" required>
+                <input type="checkbox" class="check-box">
+                <span>Lembrar senha</span>
+                <button type="submit" class="submit-btn">Log in</button>
+                </button>
+            </form>
+
+            <form id="register" class="input-group">
+                <div class="icon-container">
+                    <div class="icon" onclick="selectIcon(this)">
+                        <img src="bandeira-argentina.png" alt="País 1">
+                    </div>
+                    <div class="icon" onclick="selectIcon(this)">
+                        <img src="bandeira-brasil.png" alt="País 2">
+                    </div>
+                    <div class="icon" onclick="selectIcon(this)">
+                        <img src="bandeira-eua.png" alt="País 3">
+                    </div>
+                </div>
+                <input type="text" class="input-field" placeholder="Nome" required>
+
+                <input type="email" class="input-field" placeholder="Email" required>
+
+                <input type="text" class="input-field" placeholder="Crie uma Senha">
+
+        
+
+                    <button type="submit" class="submit-btn">Cadastrar</button>
+
+            </form>
+        </div>
+    </div>
+    <script>
+        var log = document.getElementById("login");
+        var reg = document.getElementById("register");
+        var button = document.getElementById("btn")
+
+        function register() {
+            log.style.left = "-400px"
+            reg.style.left = "50px"
+            button.style.left = "110px"
+        }
+
+        function login() {
+            log.style.left = "50px"
+            reg.style.left = "450px"
+            button.style.left = "0"
+        }
+    </script>
+
+
+</body>
+
+</html>

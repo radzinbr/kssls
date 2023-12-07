@@ -1,0 +1,13 @@
+import express from 'express'
+import login from '../controllers/auth/login.js'
+import loginToken from '../controllers/auth/loginToken.js'  
+import logout from '../controllers/auth/logout.js'
+import registro from '../controllers/auth/registro.js'
+const router = express.Router()
+
+router.post('/registro',registro)
+router.post('/login', login)
+router.get('/login-token', loginToken)
+router.delete('/logout', logout)
+
+export default router
